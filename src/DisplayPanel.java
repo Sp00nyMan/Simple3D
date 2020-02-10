@@ -5,7 +5,6 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-import Math.*;
 
 public class DisplayPanel extends JPanel implements KeyListener
 {
@@ -28,24 +27,6 @@ public class DisplayPanel extends JPanel implements KeyListener
 		g.translate(getWidth() / 2, getHeight() / 2); //Move origin to screen center
 
 		cube.draw((Graphics2D) g); //draw cube
-	}
-
-	public static Matrix3 getTransform(double xAngle, double yAngle, double zAngle) {
-
-		//На главной диагонали всегда косинус, чтобы при угле наклона 0 получалась единичная матрица и фигура не вращалась
-		Matrix3 XZTransform = new Matrix3(new Vertex3(Math.cos(Math.toRadians(xAngle)), 0, Math.sin(Math.toRadians(xAngle))),
-		                                  new Vertex3(0, 1, 0),
-		                                  new Vertex3(-Math.sin(Math.toRadians(xAngle)), 0, Math.cos(Math.toRadians(xAngle)))
-		);
-		Matrix3 YZTransform = new Matrix3(new Vertex3(1, 0, 0),
-		                                  new Vertex3(0, Math.cos(Math.toRadians(yAngle)), -Math.sin(Math.toRadians(yAngle))),
-		                                  new Vertex3(0, Math.sin(Math.toRadians(yAngle)), Math.cos(Math.toRadians(yAngle)))
-		);
-		Matrix3 XYTransform = new Matrix3(new Vertex3(Math.cos(Math.toRadians(zAngle)), -Math.sin(Math.toRadians(zAngle)), 0),
-		                                  new Vertex3(Math.sin(Math.toRadians(zAngle)), Math.cos(Math.toRadians(zAngle)), 0),
-		                                  new Vertex3(0, 0, 1)
-		                                  );
-		return XZTransform.multiply(YZTransform).multiply(XYTransform);
 	}
 
 	public void keyPressed(KeyEvent e) {
@@ -74,7 +55,7 @@ public class DisplayPanel extends JPanel implements KeyListener
 				break;
 		}
 		if(xAngle != 0 || yAngle != 0 || zAngle != 0)
-			cube.rotate(getTransform(xAngle, yAngle, zAngle)); //Rotate cube at around one of axis
+			cube.rotate(xAngle, yAngle, zAngle); //Rotate cube at around one of axis
 		System.out.println("x: " + xAngle + "; y: " + yAngle + "; z: " + zAngle);
 		repaint();
 	}
