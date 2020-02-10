@@ -6,12 +6,15 @@ public class MainWindow extends JFrame
 	public MainWindow()
 	{
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
+
 		Container pane = getContentPane();
 		pane.setLayout(new BorderLayout());
 
 		DisplayPanel display = new DisplayPanel();
 		pane.add(display, BorderLayout.CENTER);
+
 		setBounds(40, 40, 500, 500);
+
 		addKeyListener(display);
 	}
 

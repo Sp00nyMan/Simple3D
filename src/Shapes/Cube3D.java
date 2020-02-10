@@ -63,32 +63,38 @@ public class Cube3D
 
 	}
 
-	public void draw(Graphics2D g, double width, double height, Matrix3 transform)
+	public void draw(Graphics2D g)
 	{
 		g.setStroke(new BasicStroke(3));
 
 		for (Rect rect : rects)
 		{
 			g.setColor(Color.ORANGE);
-			rect.draw(g, transform);
+			rect.draw(g);
 		}
 
 		g.setColor(Color.BLUE);
-		drawPivotPoints(g, transform);
+		drawPivotPoints(g);
 	}
 
-	private void drawPivotPoints(Graphics2D g, Matrix3 transform)
+	private void drawPivotPoints(Graphics2D g)
 	{
 		final int offset = 4;
 		final int diameter = 8;
 		for (int i = 0; i < 2; i++)
 		{
-			Rect rotated = rects[i].getRotated(transform);
+			g.fillOval((int) rects[i].v1.getX() - offset, (int) rects[i].v1.getY() - offset, diameter, diameter);
+			g.fillOval((int) rects[i].v2.getX() - offset, (int) rects[i].v2.getY() - offset, diameter, diameter);
+			g.fillOval((int) rects[i].v3.getX() - offset, (int) rects[i].v3.getY() - offset, diameter, diameter);
+			g.fillOval((int) rects[i].v4.getX() - offset, (int) rects[i].v4.getY() - offset, diameter, diameter);
+		}
+	}
 
-			g.fillOval((int) rotated.v1.getX() - offset, (int) rotated.v1.getY() - offset, diameter, diameter);
-			g.fillOval((int) rotated.v2.getX() - offset, (int) rotated.v2.getY() - offset, diameter, diameter);
-			g.fillOval((int) rotated.v3.getX() - offset, (int) rotated.v3.getY() - offset, diameter, diameter);
-			g.fillOval((int) rotated.v4.getX() - offset, (int) rotated.v4.getY() - offset, diameter, diameter);
+	public void rotate(Matrix3 transform)
+	{
+		for (Rect rect : rects)
+		{
+			rect.rotate(transform);
 		}
 	}
 }

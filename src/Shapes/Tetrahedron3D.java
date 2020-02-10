@@ -27,28 +27,33 @@ public class Tetrahedron3D
 		                             Color.BLUE));
 	}
 
-	public void draw(Graphics2D g, double width, double height, Matrix3 transform) {
+	public void draw(Graphics2D g) {
 		for (Triangle triangle : triangles)
 		{
 			g.setColor(Color.ORANGE);
-			triangle.draw(g, transform);
+			triangle.draw(g);
 		}
-
 		g.setColor(Color.BLUE);
-		drawPivotPoints(g, transform);
+		drawPivotPoints(g);
 	}
 
-	private void drawPivotPoints(Graphics2D g, Matrix3 transoform)
+	private void drawPivotPoints(Graphics2D g)
 	{
 		final int offset = 4;
 		final int diameter = 8;
 		for (int i = 0; i < 2; i++)
 		{
-			Triangle rotated = triangles[i].getRotated(transoform);
+			g.fillOval((int) triangles[i].v1.getX() - offset, (int) triangles[i].v1.getY() - offset, diameter, diameter);
+			g.fillOval((int) triangles[i].v2.getX() - offset, (int) triangles[i].v2.getY() - offset, diameter, diameter);
+			g.fillOval((int) triangles[i].v3.getX() - offset, (int) triangles[i].v3.getY() - offset, diameter, diameter);
+		}
+	}
 
-			g.fillOval((int) rotated.v1.getX() - offset, (int) rotated.v1.getY() - offset, diameter, diameter);
-			g.fillOval((int) rotated.v2.getX() - offset, (int) rotated.v2.getY() - offset, diameter, diameter);
-			g.fillOval((int) rotated.v3.getX() - offset, (int) rotated.v3.getY() - offset, diameter, diameter);
+	public void rotate(Matrix3 transform)
+	{
+		for (Triangle triangle : triangles)
+		{
+			triangle.rotate(transform);
 		}
 	}
 

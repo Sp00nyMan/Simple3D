@@ -22,25 +22,22 @@ public class Rect
 		this.color = color;
 	}
 
-	public void draw(Graphics2D g, Matrix3 transform)
+	public void draw(Graphics2D g)
 	{
 		Path2D.Double path = new Path2D.Double();
-		Rect rotated = getRotated(transform);
-		path.moveTo(rotated.v1.getX(), rotated.v1.getY());
-		path.lineTo(rotated.v2.getX(), rotated.v2.getY());
-		path.lineTo(rotated.v3.getX(), rotated.v3.getY());
-		path.lineTo(rotated.v4.getX(), rotated.v4.getY());
+		path.moveTo(v1.getX(), v1.getY());
+		path.lineTo(v2.getX(), v2.getY());
+		path.lineTo(v3.getX(), v3.getY());
+		path.lineTo(v4.getX(), v4.getY());
 		path.closePath();
 		g.draw(path);
 	}
 
-	public Rect getRotated(Matrix3 transform)
+	public void rotate(Matrix3 transform)
 	{
-		Vertex3 v1 = transform.transform(this.v1);
-		Vertex3 v2 = transform.transform(this.v2);
-		Vertex3 v3 = transform.transform(this.v3);
-		Vertex3 v4 = transform.transform(this.v4);
-
-		return new Rect(v1, v2, v3, v4, color);
+		v1 = transform.transform(v1);
+		v2 = transform.transform(v2);
+		v3 = transform.transform(v3);
+		v4 = transform.transform(v4);
 	}
 }
