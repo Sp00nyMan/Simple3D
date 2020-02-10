@@ -3,12 +3,14 @@ package Shapes;
 import java.awt.*;
 
 import Math.*;
+import Shapes.BasicShape.Triangle;
 
-public class Tetrahedron3D
+public class Tetrahedron3D extends Basic3DShape
 {
-	Triangle[] triangles = new Triangle[4];
 
 	public Tetrahedron3D() {
+
+		Triangle[] triangles = new Triangle[4];
 		triangles[0] = (new Triangle(new Vertex3(100, 100, 100),
 		                             new Vertex3(-100, -100, 100),
 		                             new Vertex3(-100, 100, -100),
@@ -25,30 +27,18 @@ public class Tetrahedron3D
 		                             new Vertex3(100, -100, -100),
 		                             new Vertex3(-100, -100, 100),
 		                             Color.BLUE));
+		this.edges = triangles.clone();
 	}
 
-	public void draw(Graphics2D g, double width, double height, Matrix3 transform) {
-		for (Triangle triangle : triangles)
-		{
-			g.setColor(Color.ORANGE);
-			triangle.draw(g, transform);
-		}
-
-		g.setColor(Color.BLUE);
-		drawPivotPoints(g, transform);
-	}
-
-	private void drawPivotPoints(Graphics2D g, Matrix3 transoform)
+	@Override
+	protected void drawPivotPoints(Graphics2D g)
 	{
-		final int offset = 4;
-		final int diameter = 8;
 		for (int i = 0; i < 2; i++)
 		{
-			Triangle rotated = triangles[i].getRotated(transoform);
-
-			g.fillOval((int) rotated.v1.getX() - offset, (int) rotated.v1.getY() - offset, diameter, diameter);
-			g.fillOval((int) rotated.v2.getX() - offset, (int) rotated.v2.getY() - offset, diameter, diameter);
-			g.fillOval((int) rotated.v3.getX() - offset, (int) rotated.v3.getY() - offset, diameter, diameter);
+			for (Vertex3 vertex : edges[i].getVertices())
+			{
+				g.fillOval((int) vertex.getX() - pivotOffset, (int) vertex.getY() - pivotOffset, pivotDiameter, pivotDiameter);
+			}
 		}
 	}
 

@@ -1,13 +1,13 @@
 package Shapes;
 
 import java.awt.*;
-import java.awt.geom.Path2D;
 
 import Math.*;
+import Shapes.BasicShape.BasicShape;
+import Shapes.BasicShape.Rect;
 
-public class Cube3D
+public class Cube3D extends Basic3DShape
 {
-	Rect[] rects = new Rect[6];
 
 	public Cube3D(double width, double height, double length)
 	{
@@ -23,6 +23,8 @@ public class Cube3D
 		Vertex3 frontRightUpper = new Vertex3(halfW, halfH, halfL);
 		Vertex3 frontLeftLower = new Vertex3(-halfW, -halfH, halfL);
 		Vertex3 frontRightLower = new Vertex3(halfW, -halfH, halfL);
+
+		Rect[] rects = new Rect[6];
 
 		//Задний квадрат куба (-Z = const)
 		rects[0] = new Rect( backLeftUpper,
@@ -60,35 +62,18 @@ public class Cube3D
 		                    frontRightLower, // Правая нижняя точка
 		                    backRightLower, //Левая нижняя точка
 		                    Color.WHITE);
-
+		this.edges = rects.clone();
 	}
 
-	public void draw(Graphics2D g, double width, double height, Matrix3 transform)
+	@Override
+	protected void drawPivotPoints(Graphics2D g)
 	{
-		g.setStroke(new BasicStroke(3));
-
-		for (Rect rect : rects)
-		{
-			g.setColor(Color.ORANGE);
-			rect.draw(g, transform);
-		}
-
-		g.setColor(Color.BLUE);
-		drawPivotPoints(g, transform);
-	}
-
-	private void drawPivotPoints(Graphics2D g, Matrix3 transform)
-	{
-		final int offset = 4;
-		final int diameter = 8;
 		for (int i = 0; i < 2; i++)
 		{
-			Rect rotated = rects[i].getRotated(transform);
-
-			g.fillOval((int) rotated.v1.getX() - offset, (int) rotated.v1.getY() - offset, diameter, diameter);
-			g.fillOval((int) rotated.v2.getX() - offset, (int) rotated.v2.getY() - offset, diameter, diameter);
-			g.fillOval((int) rotated.v3.getX() - offset, (int) rotated.v3.getY() - offset, diameter, diameter);
-			g.fillOval((int) rotated.v4.getX() - offset, (int) rotated.v4.getY() - offset, diameter, diameter);
+			for (Vertex3 vertex : edges[i].getVertices())
+			{
+				g.fillOval((int) vertex.getX() - pivotOffset, (int) vertex.getY() - pivotOffset, pivotDiameter, pivotDiameter);
+			}
 		}
 	}
 }

@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="489a47c9-3927-42b9-aa12-788cbd8ed02f" name="Default Changelist" comment="" />
+    <list default="true" id="489a47c9-3927-42b9-aa12-788cbd8ed02f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Shapes/Basic3DShape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Shapes/BasicShape/BasicShape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DisplayPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DisplayPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Shapes/Cube3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shapes/Cube3D.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Shapes/Rect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shapes/BasicShape/Rect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Shapes/Tetrahedron3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shapes/Tetrahedron3D.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Shapes/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shapes/BasicShape/Triangle.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +23,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1XbckPwPYH80IAfg0GlXzPNUeiF" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -22,6 +34,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -54,33 +67,51 @@
       <updated>1581318376750</updated>
       <workItem from="1581318379313" duration="319000" />
       <workItem from="1581318716219" duration="22234000" />
+      <workItem from="1581341889554" duration="3051000" />
+      <workItem from="1581356119125" duration="2500000" />
     </task>
+    <task id="LOCAL-00001" summary="Now rotates around axis">
+      <created>1581345238173</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1581345238173</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Now rotates around axis" />
+    <option name="LAST_COMMIT_MESSAGE" value="Now rotates around axis" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="446" y="51" key="#com.intellij.ide.util.MemberChooser" timestamp="1581323697504">
+    <state x="446" y="51" key="#com.intellij.ide.util.MemberChooser" timestamp="1581358477793">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="446" y="51" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1581323697504" />
-    <state width="1237" height="204" key="GridCell.Tab.0.bottom" timestamp="1581341812498">
+    <state x="446" y="51" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1581358477793" />
+    <state x="265" y="0" key="CommitChangelistDialog2" timestamp="1581345237393">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="204" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1581341812498" />
-    <state width="1237" height="204" key="GridCell.Tab.0.center" timestamp="1581341812498">
+    <state x="265" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1581345237393" />
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1581358621732">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="204" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1581341812498" />
-    <state width="1237" height="204" key="GridCell.Tab.0.left" timestamp="1581341812498">
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1581358621732" />
+    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1581358621732">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="204" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1581341812498" />
-    <state width="1237" height="204" key="GridCell.Tab.0.right" timestamp="1581341812498">
+    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1581358621732" />
+    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1581358621732">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="204" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1581341812498" />
+    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1581358621732" />
+    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1581358621732">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1581358621732" />
     <state width="1237" height="204" key="GridCell.Tab.1.bottom" timestamp="1581341812498">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
