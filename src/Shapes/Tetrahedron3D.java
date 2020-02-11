@@ -37,7 +37,7 @@ public class Tetrahedron3D extends Basic3DShape
 		{
 			for (Vertex3 vertex : edges[i].getVertices())
 			{
-				g.fillOval((int) vertex.getX() - pivotOffset, (int) vertex.getY() - pivotOffset, pivotDiameter, pivotDiameter);
+				g.fillOval((int) vertex.getX() - pivotDiameter / 2, (int) vertex.getY() -  pivotDiameter / 2, pivotDiameter, pivotDiameter);
 			}
 		}
 	}
