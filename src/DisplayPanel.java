@@ -1,5 +1,6 @@
 import Shapes.Basic3DShape;
 import Shapes.Cube3D;
+import Shapes.Icosahedron;
 import Shapes.Tetrahedron3D;
 
 import javax.swing.*;
@@ -13,7 +14,7 @@ public class DisplayPanel extends JPanel implements KeyListener
 	Basic3DShape shape;
 	public static final double DEFAULT_ROTATION_ANGLE = 3; //deg
 	public DisplayPanel() {
-		shape = new Tetrahedron3D();
+		shape = new Icosahedron();
 	}
 
 	@Override
