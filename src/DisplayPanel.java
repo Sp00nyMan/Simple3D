@@ -1,4 +1,7 @@
+import Shapes.Basic3DShape;
 import Shapes.Cube3D;
+import Shapes.Icosahedron;
+import Shapes.Tetrahedron3D;
 
 import javax.swing.*;
 import java.awt.*;
@@ -8,10 +11,10 @@ import java.awt.event.KeyListener;
 
 public class DisplayPanel extends JPanel implements KeyListener
 {
-	Cube3D cube;
-	public static final double DEFAULT_ROTATION_ANGLE = 1; //deg
+	Basic3DShape shape;
+	public static final double DEFAULT_ROTATION_ANGLE = 3; //deg
 	public DisplayPanel() {
-		cube = new Cube3D(200, 200, 200);
+		shape = new Icosahedron();
 	}
 
 	@Override
@@ -26,7 +29,7 @@ public class DisplayPanel extends JPanel implements KeyListener
 
 		g.translate(getWidth() / 2, getHeight() / 2); //Move origin to screen center
 
-		cube.draw((Graphics2D) g); //draw cube
+		shape.draw((Graphics2D) g); //draw cube
 	}
 
 	public void keyPressed(KeyEvent e) {
@@ -55,7 +58,7 @@ public class DisplayPanel extends JPanel implements KeyListener
 				break;
 		}
 		if(xAngle != 0 || yAngle != 0 || zAngle != 0)
-			cube.rotate(xAngle, yAngle, zAngle); //Rotate cube at around one of axis
+			shape.rotate(xAngle, yAngle, zAngle); //Rotate cube at around one of axis
 		System.out.println("x: " + xAngle + "; y: " + yAngle + "; z: " + zAngle);
 		repaint();
 	}

@@ -9,7 +9,6 @@ public abstract class Basic3DShape
 {
 	BasicShape[] edges;
 	protected final int pivotDiameter = 8;
-	protected final int pivotOffset = 4;
 
 	public void rotate(double xAngle, double yAngle, double zAngle)
 	{

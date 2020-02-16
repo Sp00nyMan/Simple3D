@@ -12,7 +12,6 @@ public class MainWindow extends JFrame
 
 		DisplayPanel display = new DisplayPanel();
 		pane.add(display, BorderLayout.CENTER);
-
 		setBounds(40, 40, 500, 500);
 
 		addKeyListener(display);

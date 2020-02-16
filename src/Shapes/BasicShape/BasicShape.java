@@ -40,7 +40,7 @@ public abstract class BasicShape
 	}
 
 	public Vertex3 get(int index){
-		if(index >= 0 && index < verticesSize)
+		if(index < 0 && index >= verticesSize)
 			throw new IndexOutOfBoundsException();
 		return vertices[index];
 	}
