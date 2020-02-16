@@ -21,9 +21,9 @@ public abstract class Basic3DShape
 	{
 		g.setStroke(new BasicStroke(3));
 
-		g.setColor(Color.ORANGE);
 		for (BasicShape edge : edges)
 		{
+			g.setColor(Color.ORANGE);
 			edge.draw(g);
 		}
 

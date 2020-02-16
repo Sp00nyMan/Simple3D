@@ -1,6 +1,6 @@
 package Math;
 
-public class Vertex3
+public class Vertex3 implements Cloneable
 {
 	double x;
 	double y;
@@ -21,5 +21,11 @@ public class Vertex3
 	}
 	public double getZ() {
 		return z;
+	}
+
+	@Override
+	public Vertex3 clone()
+	{
+		return new Vertex3(x, y, z);
 	}
 }

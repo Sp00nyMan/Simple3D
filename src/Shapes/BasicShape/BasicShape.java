@@ -6,7 +6,7 @@ import java.awt.geom.Path2D;
 
 public abstract class BasicShape
 {
-	private Vertex3[] vertices;
+	protected Vertex3[] vertices;
 	private int verticesSize;
 
 	BasicShape(Vertex3[] array)
@@ -17,16 +17,12 @@ public abstract class BasicShape
 
 	public void draw(Graphics2D g)
 	{
-		Path2D path = new Path2D.Double();
-		path.moveTo(vertices[0].getX(), vertices[0].getY());
-
-		for (int i = 1; i < verticesSize; i++)
+		Polygon p = new Polygon();
+		for (Vertex3 vertex : vertices)
 		{
-			path.lineTo(vertices[i].getX(), vertices[i].getY());
+			p.addPoint((int) vertex.getX(),(int)  vertex.getY());
 		}
-		path.closePath();
-
-		g.draw(path);
+		g.drawPolygon(p);
 	}
 
 	public void rotate(double xAngel, double yAngle, double zAngle)
