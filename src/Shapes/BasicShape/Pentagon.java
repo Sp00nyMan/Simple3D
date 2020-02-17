@@ -12,6 +12,7 @@ public class Pentagon extends BasicShape
 	}
 	public Pentagon(Vertex3 center, double radius)
 	{
+		super(new Vertex3[]{center});
 		//СГЕНЕРИТЬ 5 вершин по алгоритму https://qna.habr.com/q/57444
 	}
 

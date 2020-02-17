@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="489a47c9-3927-42b9-aa12-788cbd8ed02f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Shapes/BasicShape/Pentagon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Shapes/Icosahedron.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Shapes/Sphere.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DisplayPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DisplayPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Shapes/BasicShape/BasicShape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shapes/BasicShape/BasicShape.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Shapes/BasicShape/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shapes/BasicShape/Triangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Shapes/BasicShape/Pentagon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shapes/BasicShape/Pentagon.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +70,8 @@
       <workItem from="1581747615253" duration="380000" />
       <workItem from="1581748069872" duration="120000" />
       <workItem from="1581771440317" duration="8671000" />
+      <workItem from="1581918133217" duration="727000" />
+      <workItem from="1581922519386" duration="54000" />
     </task>
     <task id="LOCAL-00001" summary="Now rotates around axis">
       <created>1581345238173</created>
@@ -108,22 +106,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="265" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1581418745990" />
-    <state width="1237" height="204" key="GridCell.Tab.0.bottom" timestamp="1581781439618">
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1581919003768">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="204" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1581781439618" />
-    <state width="1237" height="204" key="GridCell.Tab.0.center" timestamp="1581781439618">
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1581919003768" />
+    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1581919003767">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="204" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1581781439618" />
-    <state width="1237" height="204" key="GridCell.Tab.0.left" timestamp="1581781439618">
+    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1581919003767" />
+    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1581919003767">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="204" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1581781439618" />
-    <state width="1237" height="204" key="GridCell.Tab.0.right" timestamp="1581781439618">
+    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1581919003767" />
+    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1581919003768">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="204" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1581781439618" />
+    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1581919003768" />
     <state width="1237" height="204" key="GridCell.Tab.1.bottom" timestamp="1581781439619">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -148,6 +146,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1280.680@0.0.1280.680" timestamp="1581747941588" />
+    <state x="91" y="0" key="new project wizard" timestamp="1581922572995">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="91" y="0" key="new project wizard/0.0.1280.680@0.0.1280.680" timestamp="1581922572995" />
     <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1581332731649">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

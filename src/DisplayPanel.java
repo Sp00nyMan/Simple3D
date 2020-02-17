@@ -14,7 +14,7 @@ public class DisplayPanel extends JPanel implements KeyListener
 	Basic3DShape shape;
 	public static final double DEFAULT_ROTATION_ANGLE = 3; //deg
 	public DisplayPanel() {
-		shape = new Icosahedron();
+		shape = new Cube3D(200, 200, 200);
 	}
 
 	@Override
