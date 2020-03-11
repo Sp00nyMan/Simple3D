@@ -13,9 +13,6 @@ public class Icosahedron3D extends Basic3DShape
 		this.edges = new Triangle[20];
 		double Radius = 100;
 		double angleB = Math.toRadians(180 / 5);
-		double angleA = Math.toRadians(54);
-		double side = 2 * Radius * Math.sin(angleB);
-		double sideA = side * Math.sin(angleB);
 
 		double secondLayerY = -Radius / 2;
 		Vertex3 upperPivot = new Vertex3(0, -Radius, 0);
